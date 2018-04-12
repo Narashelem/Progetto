@@ -1,0 +1,231 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/image1.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+}
+
+.nav_menu {
+  float: right;
+  list-style: none;
+  margin-top: 24px;
+  margin-right: 20px;
+}
+
+.nav_menu li {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav_menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav_menu li.active {
+  border: solid 1px white;
+}
+
+.nav_menu li:hover {
+  border: solid 1px white;
+}
+
+.logo {
+  float: left;
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.logo:hover {
+  color: darkorange;
+  cursor: pointer;
+}
+
+.header {
+  margin: auto;
+}
+
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 100%;
+  margin-left: -50%;
+  margin-top: -150px;
+}
+
+.centro h1 {
+  font-size: 65px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.button {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+  text-align: center;
+}
+
+.btn {
+  border: solid 1px white;
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 5px;
+  font-size: 13ox;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: darkorange;
+}
+
+.button2:hover {
+  background-color: darkorange;
+  transition: all 0.5 ease-in;
+}
+
+.login, .signup {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  color: black;
+  display: none;
+}
+
+.error{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  color: black;
+  text-transform: uppercase;
+  display: none;
+}
+
+.error_content{
+  border: solid 2px darkorange;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.login_content{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  min-width: 200px;
+  transform: translate(-50%, -50%);
+}
+
+.signup_content{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  min-width: 200px;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  margin-left: -50px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+h3 {
+  margin-top: 150px;
+}
+
+.inputbox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inputbox input[type="text"], .inputbox input[type="password"] {
+  border: none;
+  border-bottom: solid 2px #262626;
+  background: transparent;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.inputbox input[type="text"]:focus, .inputbox input[type="password"]:focus {
+  border-bottom: solid 2px darkorange;
+}
+
+.inputbox {
+  position: relative;
+}
+
+.inputbox span {
+  position: absolute;
+}
+
+.input input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  background-color: darkorange;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fa-times{
+  height: 10px;
+  width: 10px;
+  float: right;
+  cursor: pointer;
+  margin-top: 10px;
+}

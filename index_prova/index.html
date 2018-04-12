@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="logo">
+        NOME DI CACCA
+      </div>
+      <div class="nav_menu">
+        <li class="active"><a href=" ">HOME</a></li>
+        <li><a href=" ">SERVICES</a></li>
+        <li><a href=" ">CONTACT</a></li>
+        <li><a href=" ">ABOUT</a></li>
+        <li><a href=" ">FAQ</a></li>
+      </div>
+    </div>
+
+    <div class="centro">
+      <h1>Prenota le tue visite online!</h1>
+
+      <div class="button">
+        <btn class="btn button1" onclick="openLogin()">Login</btn>
+        <btn class="btn button2" onclick="openSignup()">Sign Up</btn>
+      </div>
+    </div>
+
+    <div class="login" id="login">
+      <div class="login_content">
+        <btn class="fa fa-times" onclick="openLogin()"></btn>
+        <img src="/images/user.png" alt="">
+        <h3>Sign In</h3>
+        <form class="input" action="php/login.php" method="post">
+
+          <div class="inputbox">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+
+          <input type="submit" name="" value="Login">
+
+        </form>
+      </div>
+
+    </div>
+
+    <div class="signup" id="signup">
+      <div class="signup_content">
+        <btn class="fa fa-times" onclick="openSignup()"></btn>
+        <img src="/images/user.png" alt="">
+        <h3>Sign Up</h3>
+        <form class="input" action="php/input.php" method="post">
+
+          <div class="inputbox">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password" id="password" placeholder="Password">
+          </div>
+
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password2" id="password2" placeholder="Repeat Password" oninput="check(this)">
+          </div>
+
+          <input type="submit" name="" value="Sign Up">
+
+        </form>
+      </div>
+    </div>
+
+    <div class="error" id="error">
+      <div class="error_content">
+        <btn class="fa fa-times" onclick="openError()"></btn>
+        <h1>Username o password non coincidono. Perfavore riprovare</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function openLogin() {
+        var x = document.getElementById("login");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function openSignup() {
+        var x = document.getElementById("signup");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function openError() {
+        var x = document.getElementById("error");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function check(input) {
+      if (input.value != document.getElementById('password').value) {
+        input.setCustomValidity('La password deve coincidere.');
+      } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+        }
+    }
+  </script>
+
+</body>
+<html>
