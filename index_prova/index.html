@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="page">
+    <div class="header">
+      <div class="logo">
+        NOME DI CACCA
+      </div>
+      <div class="nav_menu">
+        <li class="active"><a href=" ">HOME</a></li>
+        <li><a href=" ">SERVICES</a></li>
+        <li><a href=" ">CONTACT</a></li>
+        <li><a href=" ">ABOUT</a></li>
+        <li><a href=" ">FAQ</a></li>
+      </div>
+    </div>
+
+    <div class="centro">
+      <h1>Prenota le tue visite online!</h1>
+
+      <div class="buttons">
+        <btn class="btn button1" onclick="toggleElement('login_content')">Login</btn>
+        <btn class="btn button2" onclick="toggleElement('signup_content')">Sign Up</btn>
+      </div>
+    </div>
+
+    <div class="shadow" id="shadow">
+      <div class="login_content" id="login_content">
+        <btn class="fa fa-times" onclick="toggleElement('login_content')"></btn>
+        <img src="/images/user.png" alt="">
+        <h3>Sign In</h3>
+        <form class="input" action="php/login.php" method="post">
+
+          <div class="inputbox">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+
+          <input type="submit" name="" value="Login">
+
+        </form>
+      </div>
+
+      <div class="signup_content" id="signup_content">
+        <btn class="fa fa-times" onclick="toggleElement('signup_content')"></btn>
+        <img src="/images/user.png" alt="">
+        <h3>Sign Up</h3>
+        <form class="input" action="php/input.php" method="post">
+
+          <div class="inputbox">
+            <span><i class="fa fa-user"></i></span>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password" id="password" placeholder="Password">
+          </div>
+
+          <div class="inputbox">
+            <span><i class="fa fa-lock"></i></span>
+            <input type="password" name="password2" id="password2" placeholder="Repeat Password" oninput="check(this)">
+          </div>
+
+          <input type="submit" name="" value="Sign Up">
+
+        </form>
+      </div>
+
+      <div class="error_content">
+        <btn class="fa fa-times" onclick="toggleElement('error_content')"></btn>
+        <h1>Username o password non coincidono. Perfavore riprovare</h1>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleElement(divId) {
+        var div = document.getElementById(divId);
+        var shadow = document.getElementById("shadow");
+        if (div.style.display !== "block" ) {
+            div.style.display = "block";
+            shadow.style.display = "block";
+        } else {
+            div.style.display = "none";
+            shadow.style.display = "none";
+        }
+    }
+
+    function check(input) {
+      if (input.value != document.getElementById('password').value) {
+        input.setCustomValidity('La password deve coincidere.');
+      } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
+        }
+    }
+  </script>
+
+</body>
+<html>

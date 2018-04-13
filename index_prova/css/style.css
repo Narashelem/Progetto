@@ -75,7 +75,7 @@ body, html {
   color: white;
 }
 
-.button {
+.buttons {
   position: absolute;
   position: absolute;
   top: 50%;
@@ -106,7 +106,7 @@ body, html {
   transition: all 0.5 ease-in;
 }
 
-.login, .signup {
+.shadow{
   position: absolute;
   top: 0px;
   left: 0px;
@@ -142,6 +142,7 @@ body, html {
   border-radius: 10px;
   text-align: center;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .login_content{
@@ -156,6 +157,7 @@ body, html {
   width: 250px;
   min-width: 200px;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .signup_content{
@@ -170,6 +172,7 @@ body, html {
   width: 250px;
   min-width: 200px;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 img {
