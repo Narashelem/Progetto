@@ -47,10 +47,15 @@ body, html {
   font-size: 40px;
   margin-top: 10px;
   margin-left: 20px;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .logo:hover {
-  color: darkorange;
+  color: #44DDFF;
   cursor: pointer;
 }
 
@@ -95,15 +100,19 @@ body, html {
   font-size: 13ox;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
 .button1 {
-  background-color: darkorange;
+  background-color: #00B6E5;
 }
 
-.button2:hover {
-  background-color: darkorange;
-  transition: all 0.5 ease-in;
+.button2:hover , .button1:hover {
+  background-color: #44DDFF;
 }
 
 .shadow{
@@ -132,7 +141,7 @@ body, html {
 }
 
 .error_content{
-  border: solid 2px darkorange;
+  border: solid 2px #00B6E5;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #fff;
@@ -202,7 +211,7 @@ h3 {
 }
 
 .inputbox input[type="text"]:focus, .inputbox input[type="password"]:focus {
-  border-bottom: solid 2px darkorange;
+  border-bottom: solid 2px #44DDFF;
 }
 
 .inputbox {
@@ -219,10 +228,19 @@ h3 {
   height: 40px;
   width: 100%;
   font-size: 16px;
-  background-color: darkorange;
+  background-color: #00B6E5;
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
+
+  -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.input input[type="submit"]:hover {
+  background-color: #44DDFF;
 }
 
 .fa-times{
@@ -231,4 +249,11 @@ h3 {
   float: right;
   cursor: pointer;
   margin-top: 10px;
+}
+
+::selection {
+  background:#00B6E5; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #00B6E5; /* Gecko Browsers */
 }
