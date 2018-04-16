@@ -2,7 +2,20 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/datepicker.css">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/main_datepicker.js"></script>
+  <script>
+    $(funcion(){
+      $('.datepicker').datepicker()
+    });
+  </script>
 </head>
 
 <body>
@@ -53,26 +66,69 @@
 
       <div class="signup_content" id="signup_content">
         <btn class="fa fa-times" onclick="toggleElement('signup_content')"></btn>
+        <btn class="fa fa-angle-double-left" onclick="toggleSignUp()" id="signup_back"></btn>
         <img src="images/user.png" alt="">
-        <h3>Sign Up</h3>
         <form class="input" action="php/input.php" method="post">
 
-          <div class="inputbox">
-            <span><i class="fa fa-user"></i></span>
-            <input type="text" name="username" placeholder="Username">
-          </div>
-          <div class="inputbox">
-            <span><i class="fa fa-lock"></i></span>
-            <input type="password" name="password" id="password" placeholder="Password">
+          <div class="signup1" id="signup1">
+
+            <h3>Sign Up</h3>
+            <div class="inputbox">
+              <span><i class="fa fa-user"></i></span>
+              <input type="text" name="username" required placeholder="Username">
+            </div>
+            <div class="inputbox">
+              <span><i class="fa fa-lock"></i></span>
+              <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+
+            <div class="inputbox">
+              <span><i class="fa fa-lock"></i></span>
+              <input type="password" name="password2" id="password2" placeholder="Repeat Password" oninput="check(this)">
+            </div>
+            <btn class="btn button3" onclick="toggleSignUp()">Continua</btn>
+
           </div>
 
-          <div class="inputbox">
-            <span><i class="fa fa-lock"></i></span>
-            <input type="password" name="password2" id="password2" placeholder="Repeat Password" oninput="check(this)">
+          <div class="signup2" id="signup2">
+
+            <h3>Perfavore completa i campi.</h3>
+
+            <div class="inputbox">
+              <input type="text" name="nome" placeholder="Nome">
+            </div>
+
+            <div class="inputbox">
+              <input type="text" name="cognome" placeholder="Cognome">
+            </div>
+
+            <div class="inputbox_gender">
+              <div class="gender1">
+                <span><i class="fa fa-mars"></i></span>
+                <input type="radio" name="gender" value="Maschio" checked> Male<br>
+              </div>
+              <div class="gender2">
+                <span><i class="fa fa-venus"></i></span>
+                <input type="radio" name="gender" value="Femmina"> Female<br>
+              </div>
+            </div>
+
+            <div class="inputbox">
+              <input type="text" name="cod_fiscale" placeholder="Codice Fiscale">
+            </div>
+
+            <div class="inputbox">
+              <input type="text" name="luogo_nascita" placeholder="Luogo di Nascita">
+            </div>
+
+            <div class="inputbox">
+              <input type="text" name="data_nascita datepicker" placeholder="Data di Nascita">
+            </div>
+
+
+            <input type="submit" name="" value="Sign Up">
+
           </div>
-
-          <input type="submit" name="" value="Sign Up">
-
         </form>
       </div>
 
@@ -96,6 +152,23 @@
             shadow.style.display = "none";
         }
     }
+
+    function toggleSignUp() {
+    var x = document.getElementById("signup1");
+    var y = document.getElementById("signup2");
+    var z = document.getElementById("signup_back");
+
+    if( x.style.display === "none"){
+      x.style.display = "block";
+      y.style.display = "none";
+      z.style.display = "none";
+    } else{
+      x.style.display = "none";
+      y.style.display = "block";
+      z.style.display = "block";
+    }
+
+}
 
     function check(input) {
       if (input.value != document.getElementById('password').value) {
