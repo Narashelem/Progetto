@@ -3,12 +3,19 @@
 <?php
   session_start();
 
+  if(!$_SESSION['logged_in']){
+    header( "refresh:0;url=index.php" );
+  }else{
+    if( $_SESSION['rank'] == 1){
+      header( "refresh:0;url=admin.php" );
+    }
+  }
+
   $user_img = $_SESSION["img"];
   $nome = $_SESSION["nome"];
   $cognome = $_SESSION["cognome"];
   $cod_fiscale = $_SESSION["cod_fiscale"];
   $luogo_nascita = $_SESSION["luogo_nascita"];
-
 
  ?>
 
@@ -71,7 +78,7 @@
           </div>
 
           <center>
-            <a href="index.html">
+            <a href="php/signout.php">
               <h1 class="boxed_item boxed_item_smaller">
                 <i class="fa fa-user"></i> SIGN OUT
               </h1>

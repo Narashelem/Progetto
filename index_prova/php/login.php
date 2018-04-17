@@ -53,24 +53,26 @@ if ($result->num_rows > 0) {
 
 if($boh){
 
+    $_SESSION['logged_in'] = true;
 
     $_SESSION["username"] = $user_h;
     $_SESSION["rank"] = $rank;
 
-    $_SESSION["nome"]  = $user_name;
-    $_SESSION["cognome"]  = $user_surname;
-    $_SESSION["sesso"]  = $user_gender;
-    $_SESSION["cod_fiscale"]  = $user_cod_fiscale;
-    $_SESSION["luogo_nascita"]  = $user_nascita;
-    $_SESSION["img"] = $user_image;
 
-    header( "refresh:3;url=session.php" );
-    echo "Connesso";
+    if($rank == 1){
+      header( "refresh:0;url=../admin.php" );
+    }else{
+      $_SESSION["nome"]  = $user_name;
+      $_SESSION["cognome"]  = $user_surname;
+      $_SESSION["sesso"]  = $user_gender;
+      $_SESSION["cod_fiscale"]  = $user_cod_fiscale;
+      $_SESSION["luogo_nascita"]  = $user_nascita;
+      $_SESSION["img"] = $user_image;
+      header( "refresh:0;url=../paziente.php" );
+    }
 }
 else{
-    $_SESSION["notmatch"] = 1;
-
-    header( "refresh:0;url=../error.html" );
+    header( "refresh:0;url=../error.php" );
 }
 
 $conn->close();

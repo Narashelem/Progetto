@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Apr 12, 2018 alle 20:11
+-- Creato il: Apr 17, 2018 alle 21:59
 -- Versione del server: 10.1.30-MariaDB
 -- Versione PHP: 7.2.2
 
@@ -66,9 +66,17 @@ CREATE TABLE `paziente` (
   `cod_fiscale` varchar(16) NOT NULL,
   `data_nascita` date NOT NULL,
   `luogo_nascita` varchar(20) NOT NULL,
-  `sesso` varchar(1) NOT NULL,
-  `img` varchar(50) NOT NULL
+  `sesso` varchar(1) NOT NULL DEFAULT 'M',
+  `img` varchar(50) NOT NULL DEFAULT 'images/profileuser.png'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `paziente`
+--
+
+INSERT INTO `paziente` (`id_paz`, `id_utente`, `nome`, `cognome`, `cod_fiscale`, `data_nascita`, `luogo_nascita`, `sesso`, `img`) VALUES
+(1, 12, 'Francesco', 'Mannocchi', 'QNAFNC99M08H501E', '2018-04-10', 'Roma', 'F', 'images/admin.jpg'),
+(2, 13, 'alexia', 'valenzuela', 'valexas', '2018-06-29', 'roma', 'F', 'images/profileuser.png');
 
 -- --------------------------------------------------------
 
@@ -114,7 +122,7 @@ CREATE TABLE `prenotazioni` (
 
 CREATE TABLE `utenti` (
   `ID_User` int(2) NOT NULL,
-  `rank` int(1) NOT NULL,
+  `rank` int(1) NOT NULL DEFAULT '0',
   `user` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -125,8 +133,8 @@ CREATE TABLE `utenti` (
 
 INSERT INTO `utenti` (`ID_User`, `rank`, `user`, `password`) VALUES
 (9, 1, 'admin', 'admin'),
-(10, 0, 'asdasd', 'asdasd'),
-(11, 0, 'dfsfsd', 'asd');
+(12, 0, 'userpaziente', 'userpaziente'),
+(13, 0, 'ale', 'ciao');
 
 --
 -- Indici per le tabelle scaricate
@@ -200,7 +208,7 @@ ALTER TABLE `medico`
 -- AUTO_INCREMENT per la tabella `paziente`
 --
 ALTER TABLE `paziente`
-  MODIFY `id_paz` int(2) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_paz` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `prenotazioni`
@@ -212,7 +220,7 @@ ALTER TABLE `prenotazioni`
 -- AUTO_INCREMENT per la tabella `utenti`
 --
 ALTER TABLE `utenti`
-  MODIFY `ID_User` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID_User` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Limiti per le tabelle scaricate

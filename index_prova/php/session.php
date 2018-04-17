@@ -9,6 +9,7 @@ session_start();
 
     echo "Nome: " . $_SESSION["nome"]. ".<br>";
     echo "Cognome: " . $_SESSION["cognome"]. ".<br>";
+    echo "Sesso: " . $_SESSION["sesso"]. ".<br>";
     echo "Codice fiscale: " . $_SESSION["cod_fiscale"]. ".<br>";
     echo "Luogo di nascita: " . $_SESSION["luogo_nascita"]. ".<br>";
 
