@@ -1,6 +1,13 @@
 $(document).ready(function(){
   var z = document.getElementById("signup_back");
-  z.style.display = "none"; 
+  z.style.display = "none";
+
+  $('#submit').click(function(){
+     if($.trim($('#username').val()) == ''){
+        alert('VUOTO');
+        returnToPreviousPage();
+     }
+  });
 });
 
 function toggleElement(divId) {

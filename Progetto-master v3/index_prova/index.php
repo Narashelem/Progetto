@@ -95,7 +95,7 @@
             <h3>Sign Up</h3>
             <div class="inputbox">
               <span><i class="fa fa-user"></i></span>
-              <input type="text" name="username" required placeholder="Username">
+              <input type="text" name="username" id="username" placeholder="Username" >
             </div>
             <div class="inputbox">
               <span><i class="fa fa-lock"></i></span>
@@ -146,7 +146,7 @@
             </div>
 
 
-            <input type="submit" name="" value="Sign Up">
+            <input type="submit" id="submit" name="" value="Sign Up">
 
           </div>
         </form>
