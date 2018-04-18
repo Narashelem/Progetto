@@ -14,7 +14,7 @@
 
     <div class="shadow">
       <div class="error_content">
-        <a class="fa fa-times" href="index.php"></a>
+        <a class="fa fa-times" href="../index.php"></a>
         <h1>Il tuo account è stato appena creato.</h1>
       </div>
     </div>
