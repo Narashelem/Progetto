@@ -125,7 +125,15 @@
 
             <div class="col-lg-9 home2">
               <div class="headerhome2">
-                PROFILO <i class="fa fa-user"></i>
+
+
+                <div class="informazioni_paziente">
+                  Informazioni paziente
+                </div>
+                <div class="prossima_visita">z
+                  Prossima visita
+                </div>
+
               </div>
             </div>
 

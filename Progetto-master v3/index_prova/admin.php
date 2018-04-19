@@ -28,16 +28,16 @@
       <div class="sidemenu">
         <div class="sidemenu-container">
           <ul>
-            <li><icon class="fa fa-home"></icon><a href="index.html">Home</a></li>
-            <li><icon class="fa fa-user"></icon><a href="index.html">Pazienti</a>
+            <li><icon class="fa fa-home"></icon><a href="index.php">Home</a></li>
+            <li><icon class="fa fa-user"></icon><a href="index.php">Pazienti</a>
               <ul>
-                <li><a href="index.html">Aggiungi</a></li>
-                <li><a href="index.html">Elimina</a></li>
-                <li><a href="index.html">Prescrivi</a></li>
+                <li><a href="index.php">Aggiungi</a></li>
+                <li><a href="index.php">Elimina</a></li>
+                <li><a href="index.php">Prescrivi</a></li>
               </ul>
             </li>
-            <li><icon class="fa fa-address-card"></icon><a href="index.html">Calendario</a></li>
-            <li><icon class="fa fa-question"></icon><a href="index.html">Esci</a></li>
+            <li><icon class="fa fa-address-card"></icon><a href="index.php">Calendario</a></li>
+            <li><icon class="fa fa-question"></icon><a href="php/signout.php">Esci</a></li>
           </ul>
         </div>
       </div>
