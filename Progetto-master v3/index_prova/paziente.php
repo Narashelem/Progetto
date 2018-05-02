@@ -128,10 +128,14 @@
 
 
                 <div class="informazioni_paziente">
-                  Informazioni paziente
+                  <div class="titlehead">
+                    Informazioni personali:
+                  </div>
                 </div>
-                <div class="prossima_visita">z
-                  Prossima visita
+                <div class="prossima_visita">
+                  <div class="titlehead">
+                    Prossima visita:
+                  </div>
                 </div>
 
               </div>

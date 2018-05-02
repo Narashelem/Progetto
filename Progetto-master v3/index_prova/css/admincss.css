@@ -1,6 +1,6 @@
 .page{
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   background-color: green;
   height: 100%;
 }
@@ -16,21 +16,22 @@ icon{
 }
 
 .sidemenu{
-  background-color: #34495E;
-  color: #fff;
+  background-color: #F3F3F3;
+  color: #000000;
   height: 100%;
+  border-right: solid 2px #AAAAAA;
 }
 
 .sidemenu-container ul li{
   padding: 15px;
   text-decoration: none;
   list-style: none;
-  border-top: solid 1px #BDC3C7;
+ /*  border-top: solid 1px #BDC3C7; */
   /*border-right: solid 5px #F1C40F; */
 }
 
 .sidemenu-container > ul > li{
-  border-right: solid 5px #F1C40F;
+  /*border-right: solid 5px #AAAAAA;*/
 }
 
 .sidemenu ul ul{
@@ -40,7 +41,7 @@ icon{
   position: absolute;
   left: 16.65%;
   top: -0.1%;
-  background-color: #34495E;
+  background-color: #F3F3F3;
 }
 
 .sidemenu ul li:hover > ul{
@@ -49,7 +50,7 @@ icon{
 }
 
 .sidemenu-container ul li:hover{
-  background-color: rgb(242, 85, 94);
+  background-color: #DDDDDD;
 }
 
 a{
@@ -58,7 +59,7 @@ a{
 }
 
 .pagecontent{
-  background-color: rgb(211, 211, 211);
+  background-color: #ffffff;
   color: #000000;
   height: 100%;
 }
