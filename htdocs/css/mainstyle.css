@@ -1,0 +1,318 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+.page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/image1.jpg);
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+}
+
+.nav_menu {
+  float: right;
+  list-style: none;
+  margin-top: 24px;
+  margin-right: 20px;
+}
+
+.nav_menu li {
+    display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav_menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav_menu li.active {
+  border: solid 1px white;
+}
+
+.nav_menu li:hover {
+  border: solid 1px white;
+}
+
+.logo {
+  float: left;
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.logo:hover {
+  color: #44DDFF;
+  cursor: pointer;
+}
+
+.header {
+  margin: auto;
+}
+
+.centro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 100%;
+  margin-left: -50%;
+  margin-top: -150px;
+}
+
+.centro h1 {
+  font-size: 65px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+.buttons {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin-left: -50%;
+  text-align: center;
+}
+
+.btn {
+  border: solid 1px white;
+  padding: 10px 30px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 5px;
+  font-size: 13ox;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.button1 {
+  background-color: #00B6E5;
+}
+
+.button2:hover , .button1:hover {
+  background-color: #44DDFF;
+}
+
+.shadow{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  color: black;
+  display: none;
+}
+
+.error{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+  color: black;
+  text-transform: uppercase;
+  display: none;
+}
+
+.error_content{
+  border: solid 2px #00B6E5;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.login_content{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  min-width: 200px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.signup_content{
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  min-width: 200px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.signup2{
+  display: none;
+}
+
+.signup1{
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  margin-left: -50px;
+  margin-top: 30px;
+  position: absolute;
+}
+
+h3 {
+  margin-top: 150px;
+}
+
+.inputbox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inputbox input[type="text"], .inputbox input[type="password"] {
+  border: none;
+  border-bottom: solid 2px #262626;
+  background: transparent;
+  font-size: 16px;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.inputbox input[type="text"]:focus, .inputbox input[type="password"]:focus {
+  border-bottom: solid 2px #44DDFF;
+}
+
+.inputbox {
+  position: relative;
+}
+
+.inputbox_gender{
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.gender1{
+  float: left;
+  margin-right: 10px;
+}
+
+.gender2{
+  float: right;
+  margin-left: 10px;
+}
+
+.fa-mars{
+  color: blue;
+}
+
+.fa-venus{
+  color: pink;
+}
+
+.inputbox span {
+  position: absolute;
+}
+
+.input input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  background-color: #00B6E5;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.button3{
+  border: none;
+  outline: none;
+  width: 100% !important; /* WARNING:  */ /* WARNING:  */
+  font-size: 16px;
+  background-color:  #00B6E5;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: none !important;
+
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+
+
+.input input[type="submit"]:hover, .button3:hover {
+  background-color: #44DDFF;
+}
+
+.fa{
+  height: 10px;
+  width: 10px;
+  cursor: pointer;
+  margin-top: 0px;
+}
+
+.fa-times{
+  float: right;
+  margin-top: 10px;
+}
+
+.fa-angle-double-left{
+  float: left;
+  display: none;
+  margin-top: 10px;
+}
+
+::selection {
+  background:#00B6E5; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #00B6E5; /* Gecko Browsers */
+}

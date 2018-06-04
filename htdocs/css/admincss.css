@@ -1,0 +1,75 @@
+.page{
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: green;
+  height: 100%;
+}
+
+.sidemenu-container ul{
+  padding: 0;
+  margin: 0;
+}
+
+icon{
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.sidemenu{
+  background-color: #F3F3F3;
+  color: #000000;
+  height: 100%;
+  border-right: solid 2px #AAAAAA;
+}
+
+.sidemenu-container ul li{
+  padding: 15px;
+  text-decoration: none;
+  list-style: none;
+ /*  border-top: solid 1px #BDC3C7; */
+  /*border-right: solid 5px #F1C40F; */
+}
+
+.sidemenu-container > ul > li{
+  /*border-right: solid 5px #AAAAAA;*/
+}
+
+.sidemenu ul ul{
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+  position: absolute;
+  left: 16.65%;
+  top: -0.1%;
+  background-color: #F3F3F3;
+}
+
+.sidemenu ul li:hover > ul{
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidemenu-container ul li:hover{
+  background-color: #DDDDDD;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.pagecontent{
+  background-color: #ffffff;
+  color: #000000;
+  height: 100%;
+}
+
+body{
+  background-color: #000000;
+}
+
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
